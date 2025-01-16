@@ -1,0 +1,32 @@
+# Create example_config.yaml in the /examples directory
+mkdir -p ../examples
+cat <<EOL > ../examples/example_config.yaml
+# Example Configuration for Cross-Chain Liquidity Optimizer
+
+# Blockchain settings
+blockchains:
+  ethereum:
+    rpc_url: https://mainnet.infura.io/v3/example_project_id
+    chain_id: 1
+  bsc:
+    rpc_url: https://bsc-dataseed.binance.org/
+    chain_id: 56
+  polygon:
+    rpc_url: https://polygon-rpc.com/
+    chain_id: 137
+
+# Game SDK settings
+game_sdk:
+  base_url: https://api.examplegamesdk.com
+  api_key: example_api_key
+
+# AI Agent settings
+ai_agent:
+  memory_size: 100
+  prompt_default: Optimize liquidity allocation across chains
+
+# Logging settings
+logging:
+  level: DEBUG
+  file: logs/local_run.log
+EOL
