@@ -1,0 +1,36 @@
+# Create config.yaml in the /config directory
+mkdir -p ../config
+cat <<EOL > ../config/config.yaml
+# Configuration File for Cross-Chain Liquidity Optimizer
+
+# General settings
+project_name: CrossChainLiquidityOptimizer
+environment: production
+
+# Blockchain settings
+blockchains:
+  ethereum:
+    rpc_url: https://mainnet.infura.io/v3/YOUR_PROJECT_ID
+    chain_id: 1
+  bsc:
+    rpc_url: https://bsc-dataseed.binance.org/
+    chain_id: 56
+  polygon:
+    rpc_url: https://polygon-rpc.com/
+    chain_id: 137
+
+# Game SDK settings
+game_sdk:
+  base_url: https://api.gamesdk.com
+  api_key: YOUR_GAME_SDK_API_KEY
+
+# AI Agent settings
+ai_agent:
+  memory_size: 1000
+  prompt_default: Optimize liquidity
+
+# Logging settings
+logging:
+  level: INFO
+  file: logs/app.log
+EOL
