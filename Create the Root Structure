@@ -1,0 +1,2 @@
+# Create the main directory and subdirectories
+mkdir -p CrossChainLiquidityOptimizer/{docs,src/{ai_agent,blockchain,game_sdk,data,utils},config,tests,scripts,examples,assets,analytics}
